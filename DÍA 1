@@ -1,0 +1,10 @@
+# Programa de iniciación
+# Multiplica Antonio por 3
+a="Antonio"
+print(3*a)
+
+# Programa de iniciación
+# Me pregunta el nombre y respondo saludándome
+a= input("Número 1:")
+b= input("Número 2:")
+print(a+b)
