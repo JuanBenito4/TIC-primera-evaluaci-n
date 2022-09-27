@@ -1,0 +1,8 @@
+# Conseguir la media de 3 numeros
+a=int(input("primera nota:"))
+b=int(input("segunda nota:"))
+c=int(input("tercera nota:"))
+suma=(a+b+c)
+print(suma)
+media=(suma/3)
+print(media)
