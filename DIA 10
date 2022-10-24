@@ -1,16 +1,18 @@
 # pregunta cuanto dinero tienes y cuanto quieres sacar
 # y resta el dinero que te queda
 def banco():
-    dinero=int(input("¿Cuanto dinero tienes? "))
+    dinero=int(input("¿Cuanto dinero quieres ingresar? "))
     seguir=True
     while(seguir==True):
         sacar_dinero=int(input("¿Cuanto dinero quieres sacar? "))
         dinero_actual=dinero-sacar_dinero
         if(sacar_dinero> dinero):
-            print("No tienes tanto")
+            print("No tienes tanto dinero")
             seguir=True
         else:
             if(sacar_dinero<= dinero):
+                print("Te quedan")
                 print(dinero_actual)
-                seguir=True
+                seguir=False
 banco()
+print("Gracias por confiar en nosotros")
