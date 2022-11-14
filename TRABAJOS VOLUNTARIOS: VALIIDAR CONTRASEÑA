@@ -1,0 +1,23 @@
+#te pide una contraseña y te dice si es segura o no
+def validez_contraseña():
+    contraseña=input("Dime tu contraseña: ")
+    if(len(contraseña)<5):
+        print("Tu contraseña es muy corta, usa una más larga")
+    if(len(contraseña)>10):
+        print("Tu contraseña es muy larga, usa una más corta")
+    else:
+        mayuscula=False
+        for mayus in contraseña:
+            if mayus.isupper()==True:
+                mayuscula=True
+        if not mayuscula:
+            print("La contraseña debe contener al menos 1 mayúscula")
+        numero=False
+        for carac in contraseña:
+            if carac.isdigit()==True:
+                numero=True
+        if not numero:
+            print("La contraseña debe contener al menos 1 número")
+        else:
+            print("La contraseña es válida")
+validez_contraseña()
