@@ -21,3 +21,49 @@ def validez_contraseña():
         else:
             print("La contraseña es válida")
 validez_contraseña()
+
+
+
+
+
+#programa para calcular la nota de la EVAU
+def fase_obligatoria():
+    seguir=True
+    while(seguir==True):
+        carreras =input("Introduzca las 3 carreras que desee cursar: ")
+        nota1 =input("Indroduzca su nota en Inglés(Francés): ")
+        nota2 =input("Introduzca su nota en Lengua: ")
+        nota3 =input("Introduzca su nota en Historia: ")
+        nota4 =input("Introduzca su nota en Matemáticas: ")
+        if(int(nota1) <5):
+            nota1=0
+        if(int(nota2) <5):
+            nota2=0
+        if (int(nota3) <5):
+            nota3=0
+        if (int(nota4) <5):
+            nota4=0
+        notatotal= int(nota1)+ int(nota2)+ int(nota3)+ int(nota4)
+        mediafo= notatotal/4
+        print("Su media en la fase obligatoria es" , mediafo)
+        nmb =input("Introduzca su media de Bachillerato: ")
+        notaac= (0.4*mediafo) + (0.6*int(nmb))
+        print("Su nota de acceso es" , notaac)
+        if(notaac <5):
+            print("Está suspendido")
+            Seguir=False
+        else:
+            Seguir=True
+            nota1p= input("Introduzca su nota en el primer examen voluntario: ")
+            p1= input("Introduzca la ponderación del primer examen, si es 0.1 introduzca 1, si es 0.2 introduzca 2: ")
+            nota2p= input("Introduzca su nota en el segundo examen voluntario: ")
+            p2= input("Introduzca la ponderación del segundo examen si es 0.1 introduzca 1, si es 0.2 introduzca 2: ")
+            if(int(nota1p) <5):
+                nota1p=0
+            if(int(nota2p) <5):
+                nota2p=0
+            p11= int(p1)/10
+            p21= int(p2)/10
+            notaadmision= notaac+int(nota1p)*p11+int(nota2p)*p21
+            print("Su nota de admisión es" , notaadmision)
+fase_obligatoria()
